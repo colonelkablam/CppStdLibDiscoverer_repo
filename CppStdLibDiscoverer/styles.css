@@ -1,0 +1,69 @@
+/* Set the background color of the page */
+body {
+    background-color: #313131; /* Dark grey background */
+    color: #d3d3d3; /* Light grey text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style the h1 with a rainbow gradient */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, violet, red, orange, yellow, green, rgb(59, 59, 255), rgb(121, 12, 199), violet);
+    -webkit-background-clip: text; /* Safari and older browsers */
+    -moz-background-clip: text;    /* Firefox */
+    -o-background-clip: text;      /* Older Opera versions */
+    background-clip: text;         /* Standard property */
+    color: transparent;
+    font-weight: bold;
+}
+
+/* Style the link for better visibility */
+a {
+    color: #3dceff; /* Light blue */
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #00a0df; /* Sky blue */
+}
+
+/* Button styling */
+button {
+    background-color: #f87822;
+    color: rgba(0, 0, 0, 0.74);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px; /* Slightly rounded corners */
+
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #efff62;
+}
+
+
+/* Center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+    
+/* Style the history list */
+#symbol-history li {
+    margin-bottom: 5px;
+}

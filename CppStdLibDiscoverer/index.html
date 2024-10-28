@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random C++ Symbol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Random C++ Symbol Selector</h1>
+    <p>
+        Welcome to the C++ Standard Library Symbol Explorer! This tool is designed to help you randomly discover symbols from the C++ Standard Library. Click the "Get Random Symbol" button to explore a new function, type, or feature, and follow the link to learn more about its purpose and usage on <a href="https://en.cppreference.com/w/cpp/symbol_index" alt="a link to the C++ standard library Symbol Index">cppreference.com</a>.
+    </p>
+
+    <p>
+        Whether you're studying or brushing up on C++ essentials, this app helps explore the parts of the standard library you might not have seen or known about before...
+    </p>
+
+    <!-- Centered button container -->
+    <div class="button-container">
+        <button onclick="displayRandomSymbol()">Get New Random Std::lib Symbol</button>
+    </div>
+    
+    <!-- Placeholder for the random symbol link -->
+    <div class="link-container">
+        <p>
+            New Link: 
+            <a id="random-symbol" href="index.html">
+                Click the button to get a link to a random symbol
+            </a>
+        </p>
+    </div>
+
+    <!-- Placeholder for the list of previously selected symbols -->
+    <h3>History of Selected Symbols</h3>
+    <ul id="symbol-history"></ul>
+
+    <!-- Load the symbol links and main script -->
+    <script src="symbol_links.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
