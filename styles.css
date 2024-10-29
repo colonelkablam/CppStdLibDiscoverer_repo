@@ -38,19 +38,6 @@ a:hover {
     color: #00a0df; /* Sky blue */
 }
 
-/* Button styling */
-button {
-    background-color: #f87822;
-    color: rgba(0, 0, 0, 0.74);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 5px; /* Slightly rounded corners */
-
-}
-
 /* Button hover effect */
 button:hover {
     background-color: #efff62;
@@ -61,12 +48,17 @@ button:hover {
 
 }
 
-
-/* Center the button */
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+/* Button styling */
+button {
+    width: 100%; /* Match the container's width */
+    background-color: #f87822;
+    color: rgba(0, 0, 0, 0.74);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px; /* Slightly rounded corners */
 }
 
 .link-container {
@@ -88,25 +80,22 @@ button:hover {
     margin-bottom: 5px;
 }
 
-/* Centered search box */
+.button-container,
 .search-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto; /* Center horizontally on the page */
-    position: relative; /* Set as reference point for dropdown */
-    width: 80%; /* Ensure the container and dropdown match widths */
-    max-width: 300px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 350px;
 }
 
 #search-box {
+    width: 100%; /* Match the container's width */
     padding: 10px;
     font-size: 1em;
-    width: 100%; /* Fill the container width */
     border-radius: 5px;
     border: 2px solid #2ce414;
     background-color: #bcffbf;
-
 }
 
 /* Dropdown styling */
