@@ -9,7 +9,7 @@ function displayRandomSymbol() {
 
     randomSymbolLink.href = randomSymbol.url;
     randomSymbolLink.textContent = `Learn about ${randomSymbol.name}`;
-    addToHistory(randomSymbol.name);
+    addToHistory(randomSymbol.name, randomSymbol.url);
 }
 
 // Function to add symbol name and URL to history list
@@ -63,7 +63,7 @@ function filterSymbols() {
             resultsContainer.style.display = "none";
 
             // Add selected item to history
-            addToHistory(symbol.name);
+            addToHistory(symbol.name, symbol.url);
         };
         
         resultsContainer.appendChild(resultItem);
