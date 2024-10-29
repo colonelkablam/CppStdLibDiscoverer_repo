@@ -1,34 +1,83 @@
-// Array to store the history of selected symbols
-const symbolHistory = [];
+// Display the number of symbols
+document.getElementById("symbol-count").textContent = `Total symbols available: ${symbolCount}`;
 
+// Function to display a random symbol link
 function displayRandomSymbol() {
-    // Pick a random symbol from the symbolLinks array
     const randomIndex = Math.floor(Math.random() * symbolLinks.length);
     const randomSymbol = symbolLinks[randomIndex];
+    const randomSymbolLink = document.getElementById("random-symbol-link");
 
-    // Get the placeholder element for the current random symbol
-    const symbolElement = document.getElementById("random-symbol");
-
-    // Set the link with the symbol's name and URL
-    symbolElement.innerHTML = `<a href="${randomSymbol.url}" target="_blank">${randomSymbol.name}</a>`;
-
-    // Add the selected symbol to the history array
-    symbolHistory.push(randomSymbol);
-
-    // Update the history list
-    updateHistoryList();
+    randomSymbolLink.href = randomSymbol.url;
+    randomSymbolLink.textContent = `Learn about ${randomSymbol.name}`;
+    addToHistory(randomSymbol.name);
 }
 
-function updateHistoryList() {
+// Function to add symbol name and URL to history list
+function addToHistory(symbolName, symbolUrl) {
     const historyList = document.getElementById("symbol-history");
+    const listItem = document.createElement("li");
 
-    // Clear the list before re-rendering it
-    historyList.innerHTML = "";
+    // Create a link element for the symbol
+    const link = document.createElement("a");
+    link.textContent = symbolName;
+    link.href = symbolUrl;
+    link.target = "_blank"; // Open in new tab
+    link.rel = "noopener noreferrer"; // Security best practice when using target="_blank"
 
-    // Populate the list with history items
-    symbolHistory.forEach(symbol => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `<a href="${symbol.url}" target="_blank">${symbol.name}</a>`;
-        historyList.appendChild(listItem);
+
+    listItem.appendChild(link);
+    historyList.appendChild(listItem);
+}
+
+// Function to filter symbols based on search input
+function filterSymbols() {
+    const query = document.getElementById("search-box").value.toLowerCase();
+    const resultsContainer = document.getElementById("search-results");
+    resultsContainer.innerHTML = ""; // Clear previous results
+    resultsContainer.style.display = query ? "block" : "none"; // Show or hide dropdown based on input
+
+    // Determine if search should be prefix-based or general match
+    const matchingSymbols = symbolLinks.filter(symbol => {
+        if (query.length < 3) {
+            // Match symbols starting with the query
+            return symbol.name.toLowerCase().startsWith(query);
+        } else {
+            // Match symbols containing the query
+            return symbol.name.toLowerCase().includes(query);
+        }
+    });
+
+    // Display matching symbols
+    matchingSymbols.forEach(symbol => {
+        const resultItem = document.createElement("p");
+        resultItem.textContent = symbol.name;
+        
+        // Display the link in the designated area and clear search on click
+        resultItem.onclick = () => {
+            const selectedLink = document.getElementById("searched-symbol-link");
+            selectedLink.href = symbol.url;
+            selectedLink.textContent = `Learn about ${symbol.name}`;
+            
+            // Clear search box and hide results
+            document.getElementById("search-box").value = "";
+            resultsContainer.style.display = "none";
+
+            // Add selected item to history
+            addToHistory(symbol.name);
+        };
+        
+        resultsContainer.appendChild(resultItem);
     });
 }
+
+// Hide dropdown and clear search when clicking outside the search area
+document.addEventListener("click", (event) => {
+    const searchBox = document.getElementById("search-box");
+    const resultsContainer = document.getElementById("search-results");
+    
+    // Check if the click was outside the search box or dropdown
+    if (!searchBox.contains(event.target) && !resultsContainer.contains(event.target)) {
+        searchBox.value = ""; // Clear search box
+        resultsContainer.style.display = "none"; // Hide dropdown
+    }
+});

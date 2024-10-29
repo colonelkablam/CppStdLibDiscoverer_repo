@@ -49,6 +49,11 @@ button:hover {
     background-color: #efff62;
 }
 
+#symbol-count {
+    color: #8affb7; /* Sky blue */
+
+}
+
 
 /* Center the button */
 .button-container {
@@ -62,8 +67,72 @@ button:hover {
     justify-content: center;
     margin: 20px 0;
 }
+
+#random-symbol-link {
+    font-size: 1em;
+}
+
+#random-symbol-link:hover {
+    text-decoration: underline;
+}
     
 /* Style the history list */
 #symbol-history li {
     margin-bottom: 5px;
+}
+
+/* Centered search box */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto; /* Center horizontally on the page */
+    position: relative; /* Set as reference point for dropdown */
+    width: 80%; /* Ensure the container and dropdown match widths */
+    max-width: 300px;
+}
+
+#search-box {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%; /* Fill the container width */
+    border-radius: 5px;
+    border: 2px solid #2ce414;
+    background-color: #bcffbf;
+
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: absolute;
+    top: 100%; /* Directly below the search box */
+    left: 0; /* Align with the left edge of the container */
+    width: 100%; /* Match width of the container */
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none; /* Hide by default */
+    z-index: 10; /* Ensure it appears above other elements */
+    max-height: 200px; /* Optional: limit height and add scrolling */
+    overflow-y: auto;
+}
+
+.dropdown p {
+    color: rgb(114, 114, 114);
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown p:hover {
+    background-color: #bebebe;
+}
+
+#searched-symbol-link {
+    font-size: 1em;
+}
+
+#searched-symbol-link:hover {
+    text-decoration: underline;
 }
