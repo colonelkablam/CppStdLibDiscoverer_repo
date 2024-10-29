@@ -7,6 +7,13 @@ body {
     padding: 20px;
 }
 
+/* Center content and set max width */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Optional: add padding for smaller screens */
+}
+
 /* Style the h1 with a rainbow gradient */
 h1 {
     font-size: 2em;
