@@ -80,13 +80,24 @@ button {
     margin-bottom: 5px;
 }
 
-.button-container,
-.search-container {
+.button-container
+{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 20px auto;
     width: 80%;
     max-width: 350px;
+}
+/* Centered search box */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    position: relative; /* Set as reference point for dropdown */
+    width: 80%;
+    max-width: 330px;
 }
 
 #search-box {
