@@ -40,24 +40,33 @@ a:hover {
 
 /* Button hover effect */
 button:hover {
-    background-color: #efff62;
+    background-color: #ffdd9d;
 }
 
 #symbol-count {
-    color: #8affb7; /* Sky blue */
+    color: #8affb7;
 }
 
 /* Button styling */
+.button-container
+{
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+}
+
 button {
-    width: 100%; /* Match the container's width */
+    width: 100%;
     background-color: #f87822;
-    color: rgba(0, 0, 0, 0.74);
+    color: #000000;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    border-radius: 5px; /* Slightly rounded corners */
+    border-radius: 5px;
 }
 
 .link-container {
@@ -70,7 +79,7 @@ button {
     font-size: 1em;
 }
 
-#random-symbol-link:hover {
+#random-symbol-link:hover, #searched-symbol-link:hover {
     text-decoration: underline;
 }
     
@@ -79,33 +88,43 @@ button {
     margin-bottom: 5px;
 }
 
-.button-container
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 350px;
-}
 /* Centered search box */
 .search-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 20px auto;
-    position: relative; /* Set as reference point for dropdown */
+    position: relative; /* needed as reference point for dropdown */
     width: 80%;
-    max-width: 330px;
+    max-width: 400px;
 }
 
 #search-box {
-    width: 100%; /* Match the container's width */
-    padding: 10px;
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-size: 1em;
+    font-weight: bold;
     border-radius: 5px;
-    border: 2px solid #2ce414;
-    background-color: #bcffbf;
+    background-color: #93ff72;
+    color: #363636;
+}
+
+/* Style for the placeholder text */
+#search-box::placeholder {
+    color: #7a7a7a;
+    opacity: 1;
+}
+
+/* search-box hover effect */
+#search-box:hover {
+    background-color: #b6ffba;
+}
+
+/* Remove the default focus outline and add a custom border */
+#search-box:focus {
+    outline: none; /* Removes the default focus outline */
+    background-color: #d2ffd4;
 }
 
 /* Dropdown styling */
@@ -125,7 +144,7 @@ button {
 }
 
 .dropdown p {
-    color: rgb(114, 114, 114);
+    color: rgb(119, 119, 119);
     padding: 10px;
     margin: 0;
     cursor: pointer;
@@ -137,8 +156,4 @@ button {
 
 #searched-symbol-link {
     font-size: 1em;
-}
-
-#searched-symbol-link:hover {
-    text-decoration: underline;
 }
