@@ -32,12 +32,12 @@ h2 {
 }
 
 a {
-    color: #FFDB00;
+    color: #FF8F00;
     text-decoration: none;
 }
 
 a:hover {
-    color: skyblue;
+    color: #ffb95e;
 }
 
 button:hover {
@@ -155,3 +155,10 @@ button {
 #searched-symbol-link {
     font-size: 1em;
 }
+
+footer {
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+
