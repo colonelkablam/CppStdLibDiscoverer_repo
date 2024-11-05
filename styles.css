@@ -1,10 +1,10 @@
 /* Set the background color of the page */
 body {
-    background-color: #313131; /* Dark grey background */
-    color: #d3d3d3; /* Light grey text color */
-    font-family: Arial, sans-serif;
+    background-color: #26355D; /* background */
+    color: #d9cddd; /* text color */
+    font-family: arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Center content and set max width */
@@ -16,7 +16,7 @@ body {
 
 /* Style the h1 with a rainbow gradient */
 h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
     background: linear-gradient(90deg, violet, red, orange, yellow, green, rgb(59, 59, 255), rgb(121, 12, 199), violet);
     -webkit-background-clip: text; /* Safari and older browsers */
@@ -24,27 +24,29 @@ h1 {
     -o-background-clip: text;      /* Older Opera versions */
     background-clip: text;         /* Standard property */
     color: transparent;
-    font-weight: bold;
+    font-weight: 800;
 }
 
-/* Style the link for better visibility */
+h2 {
+    color: #FFDB00;
+}
+
 a {
-    color: #3dceff; /* Light blue */
+    color: #FFDB00;
     text-decoration: none;
 }
 
-/* Change link color on hover */
 a:hover {
-    color: #00a0df; /* Sky blue */
+    color: skyblue;
 }
 
-/* Button hover effect */
 button:hover {
-    background-color: #ffdd9d;
+    background-color: #ffb95e;
 }
 
 #symbol-count {
-    color: #8affb7;
+    color: #AF47D2;
+    font-weight: bold;
 }
 
 /* Button styling */
@@ -59,7 +61,7 @@ button:hover {
 
 button {
     width: 100%;
-    background-color: #f87822;
+    background-color: #FF8F00;
     color: #000000;
     border: none;
     padding: 10px 20px;
@@ -78,10 +80,6 @@ button {
 #random-symbol-link {
     font-size: 1em;
 }
-
-#random-symbol-link:hover, #searched-symbol-link:hover {
-    text-decoration: underline;
-}
     
 /* Style the history list */
 #symbol-history li {
@@ -99,6 +97,8 @@ button {
 }
 
 #search-box {
+    background-color: #AF47D2;
+    color: #000000;
     width: 100%;
     border: none;
     padding: 10px 20px;
@@ -106,25 +106,23 @@ button {
     font-size: 1em;
     font-weight: bold;
     border-radius: 5px;
-    background-color: #93ff72;
-    color: #363636;
 }
 
 /* Style for the placeholder text */
 #search-box::placeholder {
-    color: #7a7a7a;
+    color: #c2a9ca;
     opacity: 1;
 }
 
 /* search-box hover effect */
 #search-box:hover {
-    background-color: #b6ffba;
+    background-color: #bf81d3;
 }
 
 /* Remove the default focus outline and add a custom border */
 #search-box:focus {
     outline: none; /* Removes the default focus outline */
-    background-color: #d2ffd4;
+    background-color: #bf81d3;
 }
 
 /* Dropdown styling */
