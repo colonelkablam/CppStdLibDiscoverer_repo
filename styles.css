@@ -25,6 +25,7 @@ h1 {
     background-clip: text;         /* Standard property */
     color: transparent;
     font-weight: 800;
+    margin-bottom: 60px;
 }
 
 h2 {
