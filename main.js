@@ -8,18 +8,18 @@ function displayRandomSymbol() {
     const randomSymbolLink = document.getElementById("random-symbol-link");
 
     randomSymbolLink.href = randomSymbol.url;
-    randomSymbolLink.textContent = `Learn about ${randomSymbol.name}`;
-    addToHistory(randomSymbol.name, randomSymbol.url);
+    randomSymbolLink.textContent = `Learn about [ ${randomSymbol.name} ] in ${randomSymbol.namespace} namespace`;
+    addToHistory(randomSymbol.name, randomSymbol.url, randomSymbol.namespace);
 }
 
 // Function to add symbol name and URL to history list
-function addToHistory(symbolName, symbolUrl) {
+function addToHistory(symbolName, symbolUrl, symbolNamespace) {
     const historyList = document.getElementById("symbol-history");
     const listItem = document.createElement("li");
 
     // Create a link element for the symbol
     const link = document.createElement("a");
-    link.textContent = symbolName;
+    link.textContent = `[ ${symbolName} ] in ${symbolNamespace} namespace`;
     link.href = symbolUrl;
     link.target = "_blank"; // Open in new tab
     link.rel = "noopener noreferrer"; // Security best practice when using target="_blank"
@@ -63,7 +63,7 @@ function filterSymbols() {
             resultsContainer.style.display = "none";
 
             // Add selected item to history
-            addToHistory(symbol.name, symbol.url);
+            addToHistory(symbol.name, symbol.url, symbol.namespace);
         };
         
         resultsContainer.appendChild(resultItem);
