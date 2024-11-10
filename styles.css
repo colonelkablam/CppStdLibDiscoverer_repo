@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+.intro-text {
+    text-align: justify;
+}
+
 a:hover {
     color: #ffb95e;
 }
