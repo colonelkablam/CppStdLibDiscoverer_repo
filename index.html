@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random C++ Symbol</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="content-wrapper">
-        <h1>Random C++ Symbol Selector</h1>
+        <h1>Random C++ Standard Library Selector</h1>
+        
         <h2>Welcome!</h2>
 
         <p>
-            This tool is designed to help you randomly discover symbols from the C++ Standard Library. Click the "Get Random Symbol" button to explore a new function, type, or feature, and follow the link to learn more about its purpose and usage on <a href="https://en.cppreference.com/w/cpp/symbol_index" alt="a link to the C++ standard library Symbol Index">cppreference.com</a>.
+            Whether you're studying or brushing up on C++ essentials, this app helps explore the parts of the standard library you might not have seen or known about before.
         </p>
 
         <p>
-            Whether you're studying or brushing up on C++ essentials, this app helps explore the parts of the standard library you might not have seen or known about before.
+            Choose a button below to explore a new symbol and follow the link to learn more about its purpose and usage on the <a href="https://en.cppreference.com/w/cpp/symbol_index" alt="a link to the C++ standard library Symbol Index">cppreference.com</a> site.
         </p>
 
         <!-- New paragraph for symbol count -->
@@ -24,7 +25,7 @@
 
         <!-- Centered button container -->
         <div class="button-container">
-            <button onclick="displayRandomSymbol()">Get new random std library symbol</button>
+            <button onclick="displayRandomSymbol()">Get new random std lib symbol</button>
         </div>
         
         <!-- Placeholder for the random symbol link -->
@@ -53,13 +54,27 @@
             </p>
         </div>
 
+        <hr>
+
         <!-- Placeholder for the list of previously selected symbols -->
-        <h2>History of Selected Symbols</h2>
-        <ul id="symbol-history"></ul>
+        <div id="previous-symbols-container">
+            <h2>Previously Selected Symbols</h2>
+            <ul id="symbol-history"></ul>
+        </div>
+        
+        <hr>
+        
+        <footer>
+            <div id="footer-div">
+                <p>Copyright © 2024 Nick Harding</p>
+                <p>Portfolio site <a href="https://portfolio.nickharding.org/">here</a></p>
+            </div>
+        </footer>
+
     </div>
+</body>
 
     <!-- Load the symbol links and main script -->
-    <script src="symbol_links.js"></script>
-    <script src="main.js"></script>
-</body>
+<script src="symbol_links.js"></script>
+<script src="main.js"></script>
 </html>
