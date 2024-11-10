@@ -1,10 +1,10 @@
 /* Set the background color of the page */
 body {
-    background-color: #313131; /* Dark grey background */
-    color: #d3d3d3; /* Light grey text color */
-    font-family: Arial, sans-serif;
+    background-color: #26355D; /* background */
+    color: #d9cddd; /* text color */
+    font-family: arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Center content and set max width */
@@ -16,7 +16,7 @@ body {
 
 /* Style the h1 with a rainbow gradient */
 h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
     background: linear-gradient(90deg, violet, red, orange, yellow, green, rgb(59, 59, 255), rgb(121, 12, 199), violet);
     -webkit-background-clip: text; /* Safari and older browsers */
@@ -24,41 +24,52 @@ h1 {
     -o-background-clip: text;      /* Older Opera versions */
     background-clip: text;         /* Standard property */
     color: transparent;
-    font-weight: bold;
+    font-weight: 800;
+    margin-bottom: 60px;
 }
 
-/* Style the link for better visibility */
+h2 {
+    color: #FFDB00;
+}
+
 a {
-    color: #3dceff; /* Light blue */
+    color: #FF8F00;
     text-decoration: none;
 }
 
-/* Change link color on hover */
 a:hover {
-    color: #00a0df; /* Sky blue */
+    color: #ffb95e;
 }
 
-/* Button hover effect */
 button:hover {
-    background-color: #efff62;
+    background-color: #ffb95e;
 }
 
 #symbol-count {
-    color: #8affb7; /* Sky blue */
-
+    color: #AF47D2;
+    font-weight: bold;
 }
 
 /* Button styling */
+.button-container
+{
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+}
+
 button {
-    width: 100%; /* Match the container's width */
-    background-color: #f87822;
-    color: rgba(0, 0, 0, 0.74);
+    width: 100%;
+    background-color: #FF8F00;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    border-radius: 5px; /* Slightly rounded corners */
+    border-radius: 5px;
 }
 
 .link-container {
@@ -70,43 +81,49 @@ button {
 #random-symbol-link {
     font-size: 1em;
 }
-
-#random-symbol-link:hover {
-    text-decoration: underline;
-}
     
 /* Style the history list */
 #symbol-history li {
     margin-bottom: 5px;
 }
 
-.button-container
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 350px;
-}
 /* Centered search box */
 .search-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 20px auto;
-    position: relative; /* Set as reference point for dropdown */
+    position: relative; /* needed as reference point for dropdown */
     width: 80%;
-    max-width: 330px;
+    max-width: 400px;
 }
 
 #search-box {
-    width: 100%; /* Match the container's width */
-    padding: 10px;
+    background-color: #AF47D2;
+    color: #000000;
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-size: 1em;
+    font-weight: bold;
     border-radius: 5px;
-    border: 2px solid #2ce414;
-    background-color: #bcffbf;
+}
+
+/* Style for the placeholder text */
+#search-box::placeholder {
+    color: #c2a9ca;
+    opacity: 1;
+}
+
+/* search-box hover effect */
+#search-box:hover {
+    background-color: #bf81d3;
+}
+
+/* Remove the default focus outline and add a custom border */
+#search-box:focus {
+    outline: none; /* Removes the default focus outline */
+    background-color: #bf81d3;
 }
 
 /* Dropdown styling */
@@ -126,7 +143,7 @@ button {
 }
 
 .dropdown p {
-    color: rgb(114, 114, 114);
+    color: rgb(119, 119, 119);
     padding: 10px;
     margin: 0;
     cursor: pointer;
@@ -140,6 +157,18 @@ button {
     font-size: 1em;
 }
 
-#searched-symbol-link:hover {
-    text-decoration: underline;
+#previous-symbols-container {
+    margin-bottom: 40px;
 }
+
+footer {
+    margin: 0px 10px;
+    font-size: 0.9rem;
+}
+
+#footer-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
