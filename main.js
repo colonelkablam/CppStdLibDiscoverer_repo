@@ -1,6 +1,9 @@
 // Display the number of symbols
 document.getElementById("symbol-count").textContent = `Total symbols available: ${symbolCount}`;
 
+// update copywrite year
+document.getElementById("copywrite-year").textContent = new Date().getFullYear();
+
 // Function to display a random symbol link
 function displayRandomSymbol() {
     const randomIndex = Math.floor(Math.random() * symbolLinks.length);
